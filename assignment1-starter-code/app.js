@@ -8,6 +8,7 @@ angular.module('LunchCheck', [])
     function LunchCheckController($scope) {
         $scope.lunch = "";
         $scope.message = "";
+        $scope.list = [];
 
         $scope.getMessage = function () {
             $scope.lunch = $scope.lunch;
