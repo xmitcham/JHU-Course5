@@ -1,0 +1,16 @@
+<div><br><br><br></div>
+
+  <table ng-if="items.length > 0" class="table table-responsive table-striped">
+    <tr><th>Name</th><th>Short</th><th>Description</th><th> </th></tr>
+
+    <tr ng-repeat="item in items">
+    <td>{{item.name}}</td>
+    <td>{{item.short_name}}</td>
+    <td>{{item.description}}</td>
+    <td>
+      <button class="btn btn-sm btn-danger" ng-click="onRemove({index: $index});">Don't want this one!</button>
+    </td>
+    </tr>
+  </table>
+
+  <div ng-if="nothingFound">Nothing found</div>
