@@ -1,8 +1,10 @@
 <h3>{{$ctrl.categoryName}}</h3>
 <div><br></div>
 <table class="table table-responsive table-striped">
+  <tr><th>Item</th><th>Description</th><th>Price</th></tr>
   <tr ng-repeat="item in $ctrl.item">
     <td><b>{{ item.name }}</b></td>
-    <td><i>{{ item.short_name }}</i></td>
+    <td>{{ item.description }}</td>
+    <td>{{ item.price_large }}</td>
   </tr>
 </table>

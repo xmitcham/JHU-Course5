@@ -1,6 +1,7 @@
-<h3>Categories</h3>
+<h3>Menu</h3>
 <div><br></div>
 <table class="table table-responsive table-striped">
+  <tr><th>Category</th><th>Short Name</th></tr>
   <tr ng-repeat="category in $ctrl.category"
       ui-sref="items({ categoryShortName: '{{ category.short_name }}'})"
       class="categoryTable">
