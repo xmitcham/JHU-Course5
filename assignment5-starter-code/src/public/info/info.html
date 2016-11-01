@@ -1,0 +1,29 @@
+<div class="container">
+  <div ng-if="!infoCtrl.isRegistered">
+    <span> User not signed up</span>
+    <br>
+    <a ui-sref="public.register">Sign up now!</a>
+  </div>
+
+  <div ng-if="infoCtrl.isRegistered">
+    <div class="col-md-6">
+      <div class="reg-title">Registered user info</div>
+      <div>Name: {{ infoCtrl.user.firstname }} {{ infoCtrl.user.lastname }}</div>
+      <div>Email: {{ infoCtrl.user.email }}</div>
+      <div>Phone number: {{ infoCtrl.user.phone }}</div>
+    </div>
+
+    <div class="menu-item-tile col-md-6">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>{{infoCtrl.user.shortname}}</div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{ infoCtrl.basePath }}/images/{{ infoCtrl.user.shortname }}.jpg" alt="{{infoCtrl.item.name}}">
+        </div>
+        <div class="menu-item-price">Favorite Dish: {{ infoCtrl.user.shortname }}</div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{ infoCtrl.user.item.name }}</h3>
+        <p class="menu-item-details">{{ infoCtrl.user.item.description }}</p>
+      </div>
+    </div>
+</div>
